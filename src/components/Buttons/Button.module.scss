@@ -7,6 +7,8 @@
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
+    font-family: 'ProximaNova', sans-serif;
+
     cursor: pointer;
     background-color: var(--white);
     border: 1px solid transparent;
@@ -22,6 +24,20 @@
     }
 }
 //Button type
+
+.loginUp {
+    margin-right: 8px;
+    min-width: 110px;
+    padding: 0 16px;
+    height: 36px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 1);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
 
 .rounded {
     border-radius: 999px;
@@ -63,6 +79,12 @@
 .icon + .tittle,
 .tittle + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
 
 //Button style
