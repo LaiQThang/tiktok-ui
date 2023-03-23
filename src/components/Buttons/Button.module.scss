@@ -87,6 +87,12 @@
     text-align: center;
 }
 
+.tittle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 //Button style
 
 .small {

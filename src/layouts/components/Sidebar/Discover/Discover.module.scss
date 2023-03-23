@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+    padding: 16px 8px 8px 8px;
+}
+
+.hastagItem {
+    width: 100%;
+}
+
+.label {
+    color: #161823bf;
+    font-size: 1.4rem;
+    padding-bottom: 16px;
+}
+
+.hastag {
+    max-width: 100%;
+    width: fit-content;
+    padding: 3px 10px;
+    margin: 0 8px 10px 0;
+    font-weight: 400;
+    font-size: 1.4rem;
+    transition: background-color 300ms ease-in-out 0s;
+
+    + .hastag {
+        margin-left: 0;
+    }
+}

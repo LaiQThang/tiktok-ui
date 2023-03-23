@@ -1,6 +1,7 @@
 import style from './Header.module.scss';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
+
 import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,6 +24,8 @@ import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '../Search';
 import config from '~/config';
+import { PopupAppear } from '~/components/Popup';
+import React from 'react';
 
 const cx = classNames.bind(style);
 
@@ -58,7 +61,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
 
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
@@ -88,6 +91,20 @@ function Header() {
             separate: true,
         },
     ];
+
+    const CustomButton = React.forwardRef(({ open, ...props }, refs) => (
+        <button className={cx('primary')} ref={refs} {...props}>
+            Log in
+        </button>
+    ));
+
+    const CustomButtonUpload = React.forwardRef(({ open, ...props }, refs) => (
+        <button className={cx('upload')} ref={refs} {...props}>
+            <FontAwesomeIcon icon={faPlus} className={cx('icon-upload')} />
+            Upload
+        </button>
+    ));
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -125,8 +142,16 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button text>Upload</Button>
-                            <Button primary>Log in</Button>
+                            {/* <Button loginUp leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                                Upload
+                            </Button> */}
+
+                            <PopupAppear CustomButton={CustomButtonUpload} />
+
+                            {/* <Button  primary>
+                                Log in
+                            </Button> */}
+                            <PopupAppear CustomButton={CustomButton} />
                         </>
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>

@@ -1,0 +1,35 @@
+.wrapper {
+    padding: 20px 8px 24px 8px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.label {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 16px;
+}
+
+.login-btn {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-family: var(--font-family);
+
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 700;
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        border-color: currentColor;
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}

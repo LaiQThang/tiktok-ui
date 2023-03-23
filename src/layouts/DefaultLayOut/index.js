@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import Header from '~/layouts/components/Header';
-import Sidebar from './Sidebar';
+import Sidebar from '~/layouts/components/Sidebar';
 import style from './DefaultLayout.module.scss';
 import classNames from 'classnames/bind';
 

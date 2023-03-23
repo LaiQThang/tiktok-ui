@@ -9,7 +9,7 @@ import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
 import { SearchIcon } from '~/components/Icons';
 import { useDebounce } from '~/hooks';
-import * as searchServices from '~/Services/searchService';
+import * as Services from '~/Services/Service';
 
 const cx = classNames.bind(style);
 
@@ -33,7 +33,7 @@ function Search() {
         const fetchApi = async () => {
             setLoading(true);
 
-            const result = await searchServices.search(handleDebounce);
+            const result = await Services.search(handleDebounce);
             setSearchResult(result);
 
             setLoading(false);

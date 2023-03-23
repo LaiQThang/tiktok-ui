@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    padding: 16px 0 0 8px;
+}
+
+.linkContainer {
+    max-width: 100%;
+}
+.copyright,
+.container {
+    font-size: 1.2rem;
+    color: #16182380;
+    margin: 5px 6px 0 0;
+    &:hover {
+        text-decoration: underline;
+    }
+}
