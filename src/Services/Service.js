@@ -40,3 +40,17 @@ export const FollowingUserList = async (q, p = 5) => {
         console.log(error);
     }
 };
+
+export const VideoTopic = async (type = 'for-you', p) => {
+    try {
+        const res = await httRequest.get('videos?', {
+            params: {
+                type,
+                page: p,
+            },
+        });
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+};

@@ -11,6 +11,7 @@
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
+    --default-layout-width-sidebar: 356px;
 }
 
 * {
@@ -21,14 +22,13 @@
 
 html {
     font-size: 62.5%;
-    margin-right: -2px;
+    overflow-y: overlay;
 }
 
 body {
     // font-family: 'Nova Mono', monospace;
     font-family: var(--font-family);
     font-size: 1.6rem;
-    overflow-y: overlay;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
