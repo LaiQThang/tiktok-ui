@@ -16,57 +16,6 @@
     justify-content: center;
 }
 
-//button
-.upload,
-.primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    min-width: 100px;
-    padding: 7px 16px;
-    border-radius: 4px;
-    font-family: var(--font-family);
-
-    cursor: pointer;
-    background-color: var(--white);
-    border: 1px solid transparent;
-    user-select: none;
-}
-
-.upload {
-    margin-right: 16px;
-    min-width: 110px;
-    padding: 0 16px;
-    height: 36px;
-    border: 1px solid rgba(22, 24, 35, 0.12);
-    border-radius: 2px;
-    background: rgba(255, 255, 255, 1);
-
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-}
-
-.icon-upload {
-    width: 24px;
-    margin-right: 4px;
-}
-
-.primary {
-    color: var(--white);
-    background-color: var(--primary);
-    border-color: var(--primary);
-
-    &:hover {
-        border-color: var(--primary);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
-    }
-}
-
-//end button
-
 .inner {
     height: 100%;
     width: var(--default-layout-width);

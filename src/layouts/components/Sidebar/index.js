@@ -92,13 +92,15 @@ function Sidebar() {
 
             {!currentUser && <LoginForOn label="Log in to follow creators, like videos, and view comments." />}
 
-            <SuggestedAccounts
-                label="Suggested accounts"
-                accounts={accounts}
-                more={more}
-                handleSeeAll={handleSeeAll}
-                handleSeeLess={handleSeeLess}
-            />
+            {window.location.pathname === '/following' || (
+                <SuggestedAccounts
+                    label="Suggested accounts"
+                    accounts={accounts}
+                    more={more}
+                    handleSeeAll={handleSeeAll}
+                    handleSeeLess={handleSeeLess}
+                />
+            )}
 
             {currentUser && (
                 <SuggestedAccounts

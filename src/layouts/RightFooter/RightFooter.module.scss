@@ -1,0 +1,36 @@
+.get-app {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.go-top {
+    position: fixed;
+    bottom: 60px;
+    right: 54px;
+    animation: goTop 2s infinite;
+    animation-iteration-count: 1;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icon {
+    font-size: 1.8rem;
+}
+
+@keyframes goTop {
+    from {
+        opacity: 0.5;
+        bottom: 40px;
+    }
+    to {
+        opacity: 1;
+        bottom: 60px;
+    }
+}

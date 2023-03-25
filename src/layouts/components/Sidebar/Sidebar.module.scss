@@ -1,5 +1,12 @@
 .wrapper {
+    position: fixed;
     width: var(--default-layout-width-sidebar);
     padding: 20px 0 26px 8px;
     margin-left: -24px;
+    max-height: 92%;
+    overflow-y: auto;
 }
+
+// .wrapper::-webkit-scrollbar {
+//     display: none;
+// }

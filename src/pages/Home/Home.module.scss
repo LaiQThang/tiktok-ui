@@ -1,8 +1,8 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
     max-width: 706px;
+    margin-left: 64px;
 }
 
 .topic {
@@ -87,6 +87,8 @@
 }
 
 .video-play {
+    max-width: 80%;
+
     border-radius: 8px;
     width: auto;
     height: 472px;

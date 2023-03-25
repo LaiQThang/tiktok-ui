@@ -25,7 +25,7 @@ import Image from '~/components/Image';
 import Search from '../Search';
 import config from '~/config';
 import { PopupAppear } from '~/components/Popup';
-import React from 'react';
+import { React, forwardRef } from 'react';
 
 const cx = classNames.bind(style);
 
@@ -92,17 +92,16 @@ function Header() {
         },
     ];
 
-    const CustomButton = React.forwardRef(({ open, ...props }, refs) => (
-        <button className={cx('primary')} ref={refs} {...props}>
+    const CustomButton = forwardRef(({ open, ...props }, refs) => (
+        <Button primary ref={refs} {...props}>
             Log in
-        </button>
+        </Button>
     ));
 
-    const CustomButtonUpload = React.forwardRef(({ open, ...props }, refs) => (
-        <button className={cx('upload')} ref={refs} {...props}>
-            <FontAwesomeIcon icon={faPlus} className={cx('icon-upload')} />
+    const CustomButtonUpload = forwardRef(({ open, ...props }, refs) => (
+        <Button loginUp leftIcon={<FontAwesomeIcon icon={faPlus} />} ref={refs} {...props}>
             Upload
-        </button>
+        </Button>
     ));
 
     return (

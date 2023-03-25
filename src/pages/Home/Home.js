@@ -9,7 +9,7 @@ import {
     faCommentDots,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Tippy from '@tippyjs/react';
+import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { useRef, useState } from 'react';
 
@@ -59,9 +59,15 @@ function HomeItem({ data }) {
     return (
         <div className={cx('topic')}>
             <div>
-                <Tippy interactive delay={[800, 0]} render={renderPreview} placement="bottom-start">
+                <HeadlessTippy
+                    zIndex={1}
+                    delay={[1000, 800]}
+                    interactive
+                    render={renderPreview}
+                    placement="bottom-start"
+                >
                     <img src={data.user.avatar} alt={data.user.nickname} className={cx('avatar')} />
-                </Tippy>
+                </HeadlessTippy>
             </div>
             <div className={cx('content')}>
                 <div className={cx('title')}>

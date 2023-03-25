@@ -54,3 +54,17 @@ export const VideoTopic = async (type = 'for-you', p) => {
         console.log(error);
     }
 };
+
+export const FollowingLayout = async (type = 'for-you', p) => {
+    try {
+        const res = await httRequest.get('videos?', {
+            params: {
+                type,
+                page: p,
+            },
+        });
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
