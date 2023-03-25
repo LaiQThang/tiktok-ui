@@ -11,6 +11,7 @@
     height: 100%;
     padding-top: 62px;
     background-color: rgb(255, 255, 255);
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .icon-close {
@@ -81,4 +82,24 @@
 
 .signup {
     color: var(--primary);
+}
+
+@keyframes blowUpModal {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blowUpModalTwo {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
