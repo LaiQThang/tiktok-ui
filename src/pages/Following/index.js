@@ -22,7 +22,7 @@ function Following() {
         };
 
         fetchAPI();
-    }, []);
+    }, [topicFollowing.length]);
 
     return (
         <div className={cx('wrapper')}>

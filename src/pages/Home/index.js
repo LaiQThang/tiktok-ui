@@ -21,7 +21,7 @@ function Home() {
         };
 
         fetchAPI();
-    }, []);
+    }, [videoTopic.length]);
 
     return (
         <div className={cx('wrapper')}>
