@@ -13,11 +13,8 @@ function Home() {
     useEffect(() => {
         const fetchAPI = async () => {
             const result = await Services.VideoTopic('for-you', 2);
-            if (videoTopic.length === 0) {
-                setVideoTopic(result);
-            } else {
-                setVideoTopic((prv) => [...prv, ...result]);
-            }
+
+            setVideoTopic((prv) => [...prv, ...result]);
         };
 
         fetchAPI();
@@ -26,8 +23,8 @@ function Home() {
 
     return (
         <div className={cx('wrapper')}>
-            {videoTopic.map((topic) => (
-                <HomeItem key={topic.id} data={topic} />
+            {videoTopic.map((topic, index) => (
+                <HomeItem key={index} data={topic} />
             ))}
         </div>
     );

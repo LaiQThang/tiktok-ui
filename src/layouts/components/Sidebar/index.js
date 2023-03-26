@@ -45,8 +45,6 @@ function Sidebar() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [changeSee]);
 
-    console.log(accounts.length);
-
     useEffect(() => {
         const fetchApi = async () => {
             const result = await Services.FollowingUserList(changeFollowing, 5);
