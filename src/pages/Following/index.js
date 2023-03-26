@@ -22,12 +22,13 @@ function Following() {
         };
 
         fetchAPI();
-    }, [topicFollowing.length]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
-            {topicFollowing.map((topic) => (
-                <FollowingItem key={topic.id} data={topic} />
+            {topicFollowing.map((topic, index) => (
+                <FollowingItem key={index} data={topic} />
             ))}
         </div>
     );

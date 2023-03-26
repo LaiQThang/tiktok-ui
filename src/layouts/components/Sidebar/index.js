@@ -42,11 +42,12 @@ function Sidebar() {
         };
 
         fetchApi();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [changeSee]);
 
     useEffect(() => {
         const fetchApi = async () => {
-            const result = await Services.FollowingUserList(changeFollowing);
+            const result = await Services.FollowingUserList(changeFollowing, 5);
             if (followingAccount.length === 0) {
                 setFollowingAccount(result);
             } else {
@@ -55,6 +56,7 @@ function Sidebar() {
         };
 
         fetchApi();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [changeFollowing]);
 
     const handleSeeAll = () => {

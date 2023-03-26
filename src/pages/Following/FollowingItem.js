@@ -11,7 +11,7 @@ import { PopupAppear } from '~/components/Popup';
 
 const cx = classNames.bind(style);
 
-function FollowingItem({ data }) {
+function FollowingItem({ data = {} }) {
     const BtnFollowing = forwardRef(({ open, ...props }, refs) => (
         <Button primary className={cx('topic-following')} ref={refs} {...props}>
             Follow
